@@ -1,6 +1,7 @@
 package com.mas2022datascience.springtracabfilter.admin;
 
 import org.apache.kafka.clients.admin.NewTopic;
+import org.apache.kafka.common.config.TopicConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.config.TopicBuilder;
@@ -22,6 +23,7 @@ public class Topics {
     return TopicBuilder.name(topicName1)
         .partitions(topicPartitions1)
         .replicas(topicReplicationFactor1)
+        .config(TopicConfig.RETENTION_MS_CONFIG, "-1")
         .build();
   }
 

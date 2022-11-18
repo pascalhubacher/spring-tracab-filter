@@ -9,7 +9,7 @@ topic:
     partitions: 3
 
 filter:
-  # true -> only take frames that are within the phase time (1st pase and 2nd phase)
+  # true -> only take frames that are within the phase time (1st phase and 2nd phase)
   # false -> all frames are taken
   inPhase: true
   # "all" -> all frames with isBallInPlay setting 0 and 1
