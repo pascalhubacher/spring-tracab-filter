@@ -40,6 +40,7 @@ public class Topics {
     return TopicBuilder.name(topicName2)
         .partitions(topicPartitions2)
         .replicas(topicReplicationFactor2)
+        .config(TopicConfig.RETENTION_MS_CONFIG, "-1")
         .build();
   }
 }
